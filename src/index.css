@@ -1,0 +1,88 @@
+:root {
+  --bg: #090607;
+  --bg-deep: #12090a;
+  --card: rgba(20, 12, 12, 0.84);
+  --title: #fff4ea;
+  --text: #f0d5c6;
+  --muted: rgba(238, 214, 198, 0.7);
+  --line: rgba(255, 116, 24, 0.22);
+  --gold-soft: #ff6a1a;
+  --gold-bright: #ffb36a;
+  --rose-shadow: rgba(255, 87, 34, 0.12);
+  --orange-deep: #ff5a1f;
+  --orange-soft: #ff7c2b;
+  --orange-glow: rgba(255, 102, 26, 0.28);
+  --font-display:
+    'Bebas Neue', 'Oswald', 'Segoe UI', sans-serif;
+  --font-body:
+    'Space Grotesk', 'Manrope', 'PingFang SC', 'Microsoft YaHei', 'Segoe UI', sans-serif;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  min-width: 1280px;
+  background:
+    radial-gradient(circle at top left, rgba(255, 111, 35, 0.18), transparent 24%),
+    radial-gradient(circle at top right, rgba(255, 136, 58, 0.1), transparent 22%),
+    radial-gradient(circle at 78% 18%, rgba(255, 72, 0, 0.12), transparent 20%),
+    linear-gradient(180deg, var(--bg), var(--bg-deep));
+  color: var(--text);
+  font-family: var(--font-body);
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.01)),
+    radial-gradient(circle at 20% 10%, rgba(255, 93, 31, 0.05), transparent 18%),
+    radial-gradient(circle at 80% 0%, rgba(255, 143, 77, 0.04), transparent 22%);
+  opacity: 0.8;
+  mix-blend-mode: screen;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--title);
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: 0.015em;
+}
+
+img,
+video {
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
